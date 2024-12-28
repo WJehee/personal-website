@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth text-white">
     <head>
         <title>
             {{ config.title }}{% block title %}{% endblock %}
@@ -7,9 +7,9 @@
         <meta name="author" content="Wouter Jehee">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="{{ get_url(path="styles.css") }}">
+        <link rel="stylesheet" type="text/css" href="{{ get_url(path="css/styles.css") }}">
     </head>
-    <body>
+    <body class="bg-zinc-900 min-h-screen">
         {% block main %} {% endblock %}
     </body>
 </html>

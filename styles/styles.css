@@ -1,18 +1,50 @@
+@import url('satoshi.css');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
+    /** {*/
+    /*    border: 1px solid red;*/
+    /*}*/
+    hgroup h1 {
+        @apply m-0; 
+    }
+
     h1 {
-        @apply text-8xl font-semibold;
+        @apply text-8xl font-bold mb-8;
     }
 
     h2 {
-        @apply text-4xl;
+        @apply text-4xl font-bold;
     }
 
-    h3 {
-        @apply text-2xl;
+    a {
+        @apply hover:text-purple-900 transition;
     }
 }
 
+@layer components {
+    .button {
+        @apply text-white hover:text-white bg-purple-800 hover:bg-purple-900 transition py-2 px-4 rounded font-bold;
+    }
+
+    .icon {
+        @apply h-12 w-12;
+    }
+
+    .project {
+        @apply pt-8 grid grid-cols-2 even:text-right;
+    }
+}
+
+@layer utilities {
+    .blue {
+        @apply text-blue-700;
+    }
+
+    .red {
+        @apply text-red-700;
+    }
+}

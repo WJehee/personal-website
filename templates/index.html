@@ -1,29 +1,75 @@
 {% extends "base.html" %}
 
 {% block title %}
-| Home
+| {{ section.title }} 
 {% endblock title %}
 
 {% block main %}
 
 <main>
-    <section id="hero" class="bg-zinc-950 min-h-screen grid grid-cols-12">
-        <div class="col-start-1">
-            <h2 class="text-white">Left</h2>
-        </div>
-        <div class="bg-zinc-800 col-start-8 col-end-13">
-            <h1 class="text-white text-center p-4">Hello world</h1>
-            <p class="text-white p-10">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis nemo animi voluptatem facere tempora quibusdam placeat suscipit! Dolores, enim repellat.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, repudiandae dolorem accusantium voluptate cum animi blanditiis numquam facere omnis voluptas quae, fugit culpa necessitatibus, quo nulla sapiente! Non, tempora nihil.
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate necessitatibus officia ab ut porro voluptatem eveniet alias doloribus! Distinctio, praesentium. Ad, enim illum facilis deleniti minima nulla tempora nesciunt cum.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi commodi eligendi placeat praesentium harum cum repudiandae doloremque totam debitis dolore?
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea quaerat corrupti error magnam quas nobis eveniet inventore in. Ut, voluptatum!
-            </p>
+    <section id="hero" class="min-h-screen bg-zinc-900">
+        <div class="container mx-auto">
+            <hgroup>
+                <h1 class="pt-20">Wouter Jehee</h1>
+                <h2>Cybersecurity Engineer</h2>
+            </hgroup>
+            <div class="grid grid-cols-2 pt-16">
+                <div>
+                    {{ section.content | safe }}
+                </div>
+                <div>
+                    <a href="#projects" class="button">
+                        View projects
+                    </a>
+                </div>
+            </div>
+            <br>
+            <div class="flex justify-evenly w-full text-center">
+                {% include "partials/email.html" %}
+                {% include "partials/github.html" %}
+                {% include "partials/keyoxide.html" %}
+                {% include "partials/rss.html" %}
+                <!--{% include "partials/bluesky.html" %}-->
+                <!--{% include "partials/intigriti.html" %}-->
+            </div>
         </div>
     </section>
-    <section id="project" class="min-h-screen bg-blue-950">
+    <section id="about-me" class="bg-zinc-950">
+        <div class="container mx-auto">
+            <p>Hello</p>
+        </div>
+    </section>
+    <section id="projects" class="bg-blue-950 pb-8">
+        <div class="container mx-auto">
+            <div class="project">
+                <div>
+                    <h1>Fuzzing</h1>
+                    <p>
+                        During my master thesis I worked on fuzzing several libraries used on a cubesats, the main one being the Cubesat Space Protocol (CSP).
+                        For this use case I translated the code for the firmware to run in a simulator making it much faster to iterate.
+                    </p>
+                </div>
+                <div>
+                    <img src="" alt="">
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <img src="" alt="">
+                </div>
+               <div>
+                    <h1>Blot</h1>
+                    <p>
+                        Hello world
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos nam iure itaque iusto, voluptates aperiam obcaecati nihil similique numquam distinctio.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore eaque, aliquid nobis sed nostrum reprehenderit repellendus modi commodi ratione facilis.
+                    </p>
+                </div>
+            </div>
+        </div>
     </section>
 </main>
+
+{% include "partials/footer.html" %}
 
 {% endblock main %}
