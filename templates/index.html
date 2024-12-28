@@ -9,13 +9,15 @@
 <main>
     <section id="hero" class="min-h-screen bg-zinc-900">
         <div class="container mx-auto">
-            <hgroup>
-                <h1 class="pt-20">Wouter Jehee</h1>
-                <h2>Cybersecurity Engineer</h2>
-            </hgroup>
-            <div class="grid grid-cols-2 pt-16">
+            <div class="grid grid-cols-2">
                 <div>
-                    {{ section.content | safe }}
+                    <hgroup>
+                        <h1>Wouter Jehee</h1>
+                        <h2>Cybersecurity Engineer</h2>
+                    </hgroup>
+                    <div class="pt-8">
+                        {{ section.content | safe }}
+                    </div>
                 </div>
                 <div>
                     <a href="#projects" class="button">
@@ -34,42 +36,37 @@
             </div>
         </div>
     </section>
-    <section id="about-me" class="bg-zinc-950">
-        <div class="container mx-auto">
-            <p>Hello</p>
-        </div>
-    </section>
     <section id="projects" class="bg-blue-950 pb-8">
         <div class="container mx-auto">
             <div class="project">
-                <div>
+                <div class="">
                     <h1>Fuzzing</h1>
                     <p>
                         During my master thesis I worked on fuzzing several libraries used on a cubesats, the main one being the Cubesat Space Protocol (CSP).
                         For this use case I translated the code for the firmware to run in a simulator making it much faster to iterate.
                     </p>
                 </div>
-                <div>
-                    <img src="" alt="">
+                <div class="bg-slate-900 m-8 text-center">
+                    <p class="text-7xl text-slate-500 font-mono mt-8">ASDASDASDAD</p>
                 </div>
             </div>
             <div class="project">
-                <div>
-                    <img src="" alt="">
+                <div class="">
+                    <img src="blot_image.webp" alt="">
                 </div>
-               <div>
+                <div>
                     <h1>Blot</h1>
                     <p>
-                        Hello world
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos nam iure itaque iusto, voluptates aperiam obcaecati nihil similique numquam distinctio.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore eaque, aliquid nobis sed nostrum reprehenderit repellendus modi commodi ratione facilis.
+                        Blot is a platform for organizing games that require GPS location.
+                        It is a general framework that allows for custom definitions of zones and easy placement of those zones.
+                        There are already a few examples implemented and more might be added in the future.
                     </p>
+                    <br>
+                    <a href="" class="button">View the source code</a>
                 </div>
             </div>
         </div>
     </section>
 </main>
-
-{% include "partials/footer.html" %}
 
 {% endblock main %}
