@@ -32,7 +32,7 @@
 
 @layer components {
     .button {
-        @apply text-white hover:text-white bg-purple-800 hover:bg-purple-900 transition py-2 px-4 rounded font-bold;
+        @apply text-white hover:text-white transition py-2 px-4 rounded font-bold;
     }
 
     .icon {
@@ -40,20 +40,41 @@
     }
 
     .project {
-        @apply pt-16 grid grid-cols-2 gap-16 even:text-right;
+        @apply py-16 grid grid-cols-2 gap-16 even:text-right;
     }
 }
 
 @layer utilities {
     .blue {
-        @apply text-blue-700;
+        @apply text-violet-700;
     }
 
     .red {
-        @apply text-red-700;
+        @apply text-rose-500;
     }
 
     .purple {
-        @apply text-purple-700;
+        @apply text-fuchsia-700;
+    }
+
+    /* Gradient */
+    .gradient-wrapper {
+        @apply relative rounded-full overflow-hidden;
+    }
+
+    .gradient-wrapper::before {
+        background: conic-gradient(
+            #be123c 0deg,
+            #4a044e 20deg,
+            #4a044e 40deg,
+            #6d28d9 50deg,
+            transparent 60deg
+        );
+        @apply absolute left-[-25%] top-[-25%] h-[150%] w-[150%] animate-border-spin content-[''];
+    }
+
+    /* Body */
+    .gradient-content {
+        @apply absolute left-[3px] top-[3px] h-[calc(100%-6px)] w-[calc(100%-6px)] rounded-full;
     }
 }

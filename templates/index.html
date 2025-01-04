@@ -1,5 +1,7 @@
 {% extends "base.html" %}
 
+{% import "partials/components.html" as components %}
+
 {% block title %}
 | {{ section.title }} 
 {% endblock title %}
@@ -7,36 +9,41 @@
 {% block main %}
 
 <main>
-    <section id="hero" class="min-h-screen bg-zinc-900">
+    <section id="hero" class="min-h-screen bg-slate-950">
         <div class="container mx-auto">
-            <div class="grid grid-cols-2">
+            <div class="grid grid-cols-2 mb-16">
                 <div>
                     <hgroup>
                         <h1>Wouter Jehee</h1>
                         <h2>Cybersecurity Engineer</h2>
                     </hgroup>
-                    <div class="pt-8">
+                    <div class="pt-8 text-2xl mb-8">
                         {{ section.content | safe }}
                     </div>
+                    <a href="#projects" class="button bg-fuchsia-950 hover:bg-fuchsia-900">View Projects</a>
+                    <a href="#projects" class="button bg-rose-700 hover:bg-rose-600">Learn more</a>
                 </div>
-                <div>
-                    <a href="#projects" class="button">
-                        View projects
-                    </a>
+
+                <!--TODO: animation to make social links appears within the circle?-->
+                <div class="flex flex-col items-center justify-center">
+                    <div class="gradient-wrapper h-[400px] w-[400px]">
+                        <div class="gradient-content flex items-center justify-center bg-slate-900">
+                            <p>PHOTO HERE</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <br>
             <div class="flex justify-evenly w-full text-center">
                 {% include "partials/email.html" %}
                 {% include "partials/github.html" %}
                 {% include "partials/keyoxide.html" %}
-                {% include "partials/rss.html" %}
-                <!--{% include "partials/bluesky.html" %}-->
+                {% include "partials/bluesky.html" %}
                 <!--{% include "partials/intigriti.html" %}-->
+                {% include "partials/rss.html" %}
             </div>
         </div>
     </section>
-    <section id="projects" class="bg-blue-950 pb-8">
+    <section id="projects" class="bg-slate-900 pb-8">
         <div class="container mx-auto">
             <div class="project">
                 <div class="">
@@ -50,6 +57,7 @@
                     <p class="text-7xl text-slate-500 font-mono mt-8">ASDASDASDAD</p>
                 </div>
             </div>
+            <hr class="mx-[-4rem]">
             <div class="project">
                 <div class="">
                     <img src="blot_image.webp" alt="">
@@ -62,7 +70,7 @@
                         There are already a few examples implemented and more might be added in the future.
                     </p>
                     <br>
-                    <a href="" class="button">View the source code</a>
+                    <a href="" class="button bg-violet-800">View the source code</a>
                 </div>
             </div>
         </div>
