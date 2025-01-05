@@ -6,19 +6,26 @@
 
 {% block main %}
 
-<main class="bg-zinc-900 min-h-screen">
-    <div class="container mx-auto">
-        <h1>{{page.title}}</h1>
-        <div class="flex justify-around">
-            <div>
-                <h2>Computer</h2>
+<div class="container mx-auto">
+    <h1>{{page.title}}</h1>
+    <div class="">
+        <div class="card group">
+            <h1 class="flex justify-center opacity-20 group-hover:opacity-100 transition">Computer</h1>
+            <div class="flex justify-around mb-8">
                 <svg class="icon text-purple-200" stroke="none" fill="currentColor"  role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>NixOS</title><path d="M7.352 1.592l-1.364.002L5.32 2.75l1.557 2.713-3.137-.008-1.32 2.34H14.11l-1.353-2.332-3.192-.006-2.214-3.865zm6.175 0l-2.687.025 5.846 10.127 1.341-2.34-1.59-2.765 2.24-3.85-.683-1.182h-1.336l-1.57 2.705-1.56-2.72zm6.887 4.195l-5.846 10.125 2.696-.008 1.601-2.76 4.453.016.682-1.183-.666-1.157-3.13-.008L21.778 8.1l-1.365-2.313zM9.432 8.086l-2.696.008-1.601 2.76-4.453-.016L0 12.02l.666 1.157 3.13.008-1.575 2.71 1.365 2.315L9.432 8.086zM7.33 12.25l-.006.01-.002-.004-1.342 2.34 1.59 2.765-2.24 3.85.684 1.182H7.35l.004-.006h.001l1.567-2.698 1.558 2.72 2.688-.026-.004-.006h.01L7.33 12.25zm2.55 3.93l1.354 2.332 3.192.006 2.215 3.865 1.363-.002.668-1.156-1.557-2.713 3.137.008 1.32-2.34H9.881Z"/></svg>
             </div>
-            <div>
-                <h2>Phone</h2>
-            </div>
+            <p class="text-2xl flex justify-center opacity-20 group-hover:opacity-100 transition">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione at beatae aspernatur facere tempore fuga officia hic optio deleniti ullam?
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta voluptates nobis reiciendis harum soluta nostrum deserunt! Tenetur consequatur blanditiis similique.
+            </p>
+        </div>
+        <div class="card group">
+            <h1 class="opacity-20 group-hover:opacity-100 transition">Phone</h1>
+            <p class="text-2xl opacity-20 group-hover:opacity-100 transition">
+                some text
+            </p>
         </div>
     </div>
-</main>
+</div>
 
 {% endblock main %}

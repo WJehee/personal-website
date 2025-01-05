@@ -9,7 +9,21 @@
 <main>
     <div class="container mx-auto">
         <h1>{{section.title}}</h1>
-        {{ section.content | safe }}
+        <div class="text-2xl text-slate-700 mb-12">
+            {{ section.content | safe }}
+        </div>
+
+        <ul class="text-2xl">
+        {% for post in section.pages %}
+            <li class="flex justify-between">
+                <a href="{{post.permalink}}" class="divide-zinc-300 divide-x group">
+                    <span class="text-fuchsia-700 group-hover:text-fuchsia-600">{{ post.title }}</span>
+                    <span class="pl-2">{{ post.description }}</span>
+                </a>
+                <span class="text-fuchsia-900">{{ post.date | date(format="%d-%b-%Y") }}</span>
+            </li>
+        {% endfor %}
+        </ul>
     </div>
 </main>
 

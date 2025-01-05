@@ -1,80 +1,93 @@
 {% extends "base.html" %}
 
-{% import "partials/components.html" as components %}
-
 {% block title %}
 | {{ section.title }} 
 {% endblock title %}
 
 {% block main %}
 
-<main>
-    <section id="hero" class="min-h-screen bg-slate-950">
-        <div class="container mx-auto">
-            <div class="grid grid-cols-2 mb-16">
-                <div>
-                    <hgroup>
-                        <h1>Wouter Jehee</h1>
-                        <h2>Cybersecurity Engineer</h2>
-                    </hgroup>
-                    <div class="pt-8 text-2xl mb-8">
-                        {{ section.content | safe }}
-                    </div>
-                    <a href="#projects" class="button bg-fuchsia-950 hover:bg-fuchsia-900">View Projects</a>
-                    <a href="#projects" class="button bg-rose-700 hover:bg-rose-600">Learn more</a>
+<section id="hero" class="min-h-screen bg-slate-950">
+    <div class="container mx-auto">
+        <div class="grid grid-cols-2 my-32">
+            <div>
+                <hgroup>
+                    <h1>Wouter Jehee</h1>
+                    <h2>Cybersecurity Engineer</h2>
+                </hgroup>
+                <div class="pt-8 text-2xl mb-8">
+                    {{ section.content | safe }}
                 </div>
+                <a href="#projects" class="button bg-fuchsia-950 hover:bg-fuchsia-900">View Projects</a>
+                <a href="/about-me" class="button bg-slate-900 hover:shadow-md hover:shadow-fuchsia-700">About me</a>
+            </div>
 
-                <!--TODO: animation to make social links appears within the circle?-->
-                <div class="flex flex-col items-center justify-center">
-                    <div class="gradient-wrapper h-[400px] w-[400px]">
-                        <div class="gradient-content flex items-center justify-center bg-slate-900">
-                            <p>PHOTO HERE</p>
-                        </div>
+            <!--TODO: animation to make social links appears within the circle?-->
+            <div class="flex flex-col items-center justify-center">
+                <div class="gradient-wrapper h-[500px] w-[500px]">
+                    <div class="gradient-content flex items-center justify-center bg-slate-900">
+                        <p>PHOTO HERE</p>
                     </div>
                 </div>
             </div>
-            <div class="flex justify-evenly w-full text-center">
-                {% include "partials/email.html" %}
-                {% include "partials/github.html" %}
-                {% include "partials/keyoxide.html" %}
-                {% include "partials/bluesky.html" %}
-                <!--{% include "partials/intigriti.html" %}-->
-                {% include "partials/rss.html" %}
+        </div>
+
+        <div class="flex justify-evenly w-full text-center">
+            {% include "partials/email.html" %}
+            {% include "partials/github.html" %}
+            {% include "partials/keyoxide.html" %}
+            {% include "partials/bluesky.html" %}
+            <!--{% include "partials/intigriti.html" %}-->
+            {% include "partials/rss.html" %}
+        </div>
+    </div>
+</section>
+<section id="projects" class="bg-slate-900 pb-8">
+    <div class="container mx-auto">
+        <div class="project">
+            <div class="">
+                <h1>Fuzzing</h1>
+                <p>
+                    During my master thesis I worked on fuzzing several libraries used on a cubesats, the main one being the Cubesat Space Protocol (CSP).
+                    For this use case I translated the code for the firmware to run in a simulator making it much faster to iterate.
+                </p>
+            </div>
+            <div class="bg-slate-900 m-8 text-center">
+                <!--TODO: cool infographic about (network) fuzzing (nodes sending scrambled messages)-->
+                <p class="text-7xl text-slate-500 font-mono mt-8">ASDASDASDAD</p>
             </div>
         </div>
-    </section>
-    <section id="projects" class="bg-slate-900 pb-8">
-        <div class="container mx-auto">
-            <div class="project">
-                <div class="">
-                    <h1>Fuzzing</h1>
-                    <p>
-                        During my master thesis I worked on fuzzing several libraries used on a cubesats, the main one being the Cubesat Space Protocol (CSP).
-                        For this use case I translated the code for the firmware to run in a simulator making it much faster to iterate.
-                    </p>
-                </div>
-                <div class="bg-slate-900 m-8 text-center">
-                    <p class="text-7xl text-slate-500 font-mono mt-8">ASDASDASDAD</p>
-                </div>
+        <hr class="mx-[-4rem]">
+        <div class="project">
+            <div class="">
+                <img src="blot_image.webp" alt="">
             </div>
-            <hr class="mx-[-4rem]">
-            <div class="project">
-                <div class="">
-                    <img src="blot_image.webp" alt="">
-                </div>
-                <div>
-                    <h1>Blot</h1>
-                    <p>
-                        Blot is a platform for organizing games that require GPS location.
-                        It is a general framework that allows for custom definitions of zones and easy placement of those zones.
-                        There are already a few examples implemented and more might be added in the future.
-                    </p>
-                    <br>
-                    <a href="" class="button bg-violet-800">View the source code</a>
-                </div>
+            <div>
+
+                <h1>Blot</h1>
+                <p>
+                    Blot is a platform for organizing games that require GPS location.
+                    It is a general framework that allows for custom definitions of zones and easy placement of those zones.
+                    There are already a few examples implemented and more might be added in the future.
+                </p>
+                <br>
+                <a href="" class="button bg-violet-700 hover:bg-violet-600">View the source code</a>
             </div>
         </div>
-    </section>
-</main>
+        <hr class="mx-[-4rem]">
+        <div class="project">
+            <div>
+                <h1>M0TH3R4TE</h1>
+                <p>
+                    This is a terminal application developed in rust with the ratatui library.
+                    The goal of the application is to serve as an interface for players of a sci-fi Table Top Role-Playing Game (TTRPG) to interact with their spaceship.
+                </p>
+            </div>
+            <div>
+                <!--TODO: cool gif showing the terminal (with cool-retro-term)-->
+                <img src="blot_image.webp" alt="">
+            </div>
+        </div>
+    </div>
+</section>
 
 {% endblock main %}

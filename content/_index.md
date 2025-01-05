@@ -2,7 +2,7 @@
 title = "Home"
 +++
 
-I'm a MSc. Computer Science specialized in cybersecurity, based in the Netherlands.
+I'm a cybersecurity engineer based in the Netherlands.
 
 I <span class="purple">hack</span>
 (both the <span class="blue">making</span> and <span class="red">breaking</span> kind)
