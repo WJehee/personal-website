@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-    {% block title %}
+{% block title %}
 | {{ section.title }} 
 {% endblock title %}
 
@@ -9,7 +9,7 @@
 <section id="hero" class="min-h-screen bg-black">
     <div class="container mx-auto">
         <div class="grid grid-cols-1 lg:grid-cols-2 my-16 lg:my-32">
-            <div class="mb-8">
+            <div class="mb-8 px-4">
                 <hgroup>
                     <h1>Wouter Jehee</h1>
                     <h2>Cybersecurity Engineer</h2>
@@ -18,30 +18,31 @@
                     {{ section.content | safe }}
                 </div>
                 <a href="#projects" class="button bg-fuchsia-950 hover:bg-fuchsia-900">View Projects</a>
-                <a href="/about-me" class="button bg-slate-900 hover:shadow-md hover:shadow-fuchsia-700">About me</a>
+                <a href="/about-me" class="button bg-slate-900 hover:ring-2 ring-fuchsia-700">About me</a>
             </div>
 
-            <!--TODO: animation to make social links appears within the circle?-->
             <div class="flex flex-col items-center justify-center">
-                <div class="gradient-wrapper h-[400px] w-[400px] md:h-[500px] md:w-[500px]">
+                <div class="gradient-wrapper h-[350px] w-[350px] md:h-[500px] md:w-[500px]">
                     <div class="gradient-content flex items-center justify-center bg-slate-900">
                         <p>PHOTO HERE</p>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="flex justify-evenly w-full text-center pb-8">
+
+        <div class="flex justify-evenly w-full pb-8">
             {% include "partials/email.html" %}
             {% include "partials/github.html" %}
             {% include "partials/keyoxide.html" %}
             {% include "partials/bluesky.html" %}
             <!--{% include "partials/intigriti.html" %}-->
-            <!--{% include "partials/rss.html" %}-->
+            {% include "partials/rss.html" %}
         </div>
     </div>
 </section>
-<section id="projects" class="bg-slate-950 pb-8">
-    <div class="container mx-auto py-16 divide-y-2 divide-zinc-300">
+
+<section id="projects" class="bg-slate-950 pb-0 lg:pb-8">
+    <div class="container mx-auto py-8 lg:py-16 divide-y-2 divide-zinc-300">
         <div class="project">
             <div class="px-4 py-8 lg:p-16">
                 <h1>Fuzzing</h1>
@@ -50,13 +51,29 @@
                     For this use case I translated the code for the firmware to run in a simulator making it much faster to iterate.
                 </p>
             </div>
-            <div class="bg-slate-900 m-8 text-center">
-                <!--TODO: cool infographic about (network) fuzzing (nodes sending scrambled messages)-->
-                <p class="text-4xl text-slate-500 font-mono mt-8">ASDASDASDAD</p>
+            <div class="flex flex-col mt-32">
+                <div class="flex justify-center">
+                    <!--TODO: Randomize or do CSP header-->
+                    <h3 class="bg-slate-900 p-4 rounded-xl uppercase font-mono">Packet</h3> 
+                </div>
+                <div class="flex justify-between mb-2 flex-wrap items-center overflow-hidden py-4 px-2 group">
+                    <div class="relative z-20 w-6 h-6 bg-rose-900 rounded-full ring-zinc-900 ring-8 shrink-0"></div>
+                    <div class="relative z-10 w-6 h-6 bg-violet-900 rounded-full ring-zinc-900 ring-8 shrink-0">
+                        <div class="absolute z-0 h-1 right-full top-1/2 w-svw bg-zinc-900 -translate-y-1/2">
+                            <div class="bg-fuchsia-900 h-1 rounded-full animate-line-lr"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-between">
+                    <p>AFL++</p>
+                    <p>Target</p>
+                </div>
             </div>
         </div>
+
         <div class="project">
-            <div class="px-4 py-8 lg:p-16 xl:order-last">
+            <!--TODO: do we really want text-right here?-->
+            <div class="px-4 py-8 lg:p-16 xl:order-last xl:text-right">
                 <h1>Blot</h1>
                 <p>
                     Blot is a platform for organizing games that require GPS location.
@@ -70,6 +87,7 @@
                 <img src="blot_image.webp" alt="">
             </div>
         </div>
+
         <div class="project">
             <div class="px-4 py-8 lg:p-16">
                 <h1>M0TH3R4TE</h1>
@@ -83,7 +101,6 @@
                 <img src="blot_image.webp" alt="">
             </div>
         </div>
-
     </div>
 </section>
 
