@@ -1,20 +1,20 @@
 {% extends "base.html" %}
 
-{% block title %}
+    {% block title %}
 | {{ section.title }} 
 {% endblock title %}
 
 {% block main %}
 
-<section id="hero" class="min-h-screen bg-slate-950">
+<section id="hero" class="min-h-screen bg-black">
     <div class="container mx-auto">
-        <div class="grid grid-cols-2 my-32">
-            <div>
+        <div class="grid grid-cols-1 lg:grid-cols-2 my-16 lg:my-32">
+            <div class="mb-8">
                 <hgroup>
                     <h1>Wouter Jehee</h1>
                     <h2>Cybersecurity Engineer</h2>
                 </hgroup>
-                <div class="pt-8 text-2xl mb-8">
+                <div class="pt-8 mb-8">
                     {{ section.content | safe }}
                 </div>
                 <a href="#projects" class="button bg-fuchsia-950 hover:bg-fuchsia-900">View Projects</a>
@@ -23,46 +23,40 @@
 
             <!--TODO: animation to make social links appears within the circle?-->
             <div class="flex flex-col items-center justify-center">
-                <div class="gradient-wrapper h-[500px] w-[500px]">
+                <div class="gradient-wrapper h-[400px] w-[400px] md:h-[500px] md:w-[500px]">
                     <div class="gradient-content flex items-center justify-center bg-slate-900">
                         <p>PHOTO HERE</p>
                     </div>
                 </div>
             </div>
         </div>
-
-        <div class="flex justify-evenly w-full text-center">
+        <div class="flex justify-evenly w-full text-center pb-8">
             {% include "partials/email.html" %}
             {% include "partials/github.html" %}
             {% include "partials/keyoxide.html" %}
             {% include "partials/bluesky.html" %}
             <!--{% include "partials/intigriti.html" %}-->
-            {% include "partials/rss.html" %}
+            <!--{% include "partials/rss.html" %}-->
         </div>
     </div>
 </section>
-<section id="projects" class="bg-slate-900 pb-8">
-    <div class="container mx-auto">
+<section id="projects" class="bg-slate-950 pb-8">
+    <div class="container mx-auto py-16 divide-y-2 divide-zinc-300">
         <div class="project">
-            <div class="">
+            <div class="px-4 py-8 lg:p-16">
                 <h1>Fuzzing</h1>
                 <p>
-                    During my master thesis I worked on fuzzing several libraries used on a cubesats, the main one being the Cubesat Space Protocol (CSP).
+                    For my master thesis I worked on fuzzing several libraries used on a small satellites (known as cubesats), the main one being the Cubesat Space Protocol (CSP).
                     For this use case I translated the code for the firmware to run in a simulator making it much faster to iterate.
                 </p>
             </div>
             <div class="bg-slate-900 m-8 text-center">
                 <!--TODO: cool infographic about (network) fuzzing (nodes sending scrambled messages)-->
-                <p class="text-7xl text-slate-500 font-mono mt-8">ASDASDASDAD</p>
+                <p class="text-4xl text-slate-500 font-mono mt-8">ASDASDASDAD</p>
             </div>
         </div>
-        <hr class="mx-[-4rem]">
         <div class="project">
-            <div class="">
-                <img src="blot_image.webp" alt="">
-            </div>
-            <div>
-
+            <div class="px-4 py-8 lg:p-16 xl:order-last">
                 <h1>Blot</h1>
                 <p>
                     Blot is a platform for organizing games that require GPS location.
@@ -72,10 +66,12 @@
                 <br>
                 <a href="" class="button bg-violet-700 hover:bg-violet-600">View the source code</a>
             </div>
-        </div>
-        <hr class="mx-[-4rem]">
-        <div class="project">
             <div>
+                <img src="blot_image.webp" alt="">
+            </div>
+        </div>
+        <div class="project">
+            <div class="px-4 py-8 lg:p-16">
                 <h1>M0TH3R4TE</h1>
                 <p>
                     This is a terminal application developed in rust with the ratatui library.
@@ -87,6 +83,7 @@
                 <img src="blot_image.webp" alt="">
             </div>
         </div>
+
     </div>
 </section>
 

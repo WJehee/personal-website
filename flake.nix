@@ -15,6 +15,7 @@
             src = ./.;
             buildInputs = [ zola ];
             buildPhase = ''
+                tailwindcss -i styles/styles.css -o static/css/styles.css --minify
                 zola build
             '';
             installPhase = ''

@@ -14,7 +14,7 @@
     }
 
     h1 {
-        @apply text-8xl font-bold mb-8;
+        @apply text-4xl md:text-8xl font-bold mb-8;
     }
 
     h2 {
@@ -25,22 +25,62 @@
         @apply text-zinc-300 hover:text-white transition;
     }
 
+    p, li {
+        @apply text-xl;
+    }
+
     main {
         @apply pt-16;
+    }
+
+    article p {
+        @apply pb-4;
+    }
+
+    article code {
+        @apply font-mono;
+    }
+
+    article ul {
+        @apply list-disc mb-4;
+    }
+
+    article ol {
+        @apply list-decimal;
+    }
+
+    article ul li {
+        @apply ml-4;
+    }
+
+    article ol li {
+        @apply ml-6;
+    }
+
+    article pre {
+        @apply my-2 p-2 rounded bg-slate-900;
+    }
+
+    article code {
+        @apply p-1 font-mono bg-slate-900;
+    }
+
+    article pre code {
+        @apply m-0 p-0;
     }
 }
 
 @layer components {
     .button {
-        @apply text-white hover:text-white transition py-2 px-4 rounded font-bold;
+        @apply text-white hover:text-white transition py-2 px-4 rounded font-bold text-xl;
     }
 
     .icon {
-        @apply h-12 w-12;
+        @apply h-8 w-12 lg:h-12 lg:w-12;
     }
 
     .project {
-        @apply py-16 grid grid-cols-2 gap-16 even:text-right;
+        @apply grid grid-cols-1 xl:grid-cols-2 py-16 xl:py-32
     }
 
     .card {
@@ -77,6 +117,6 @@
     }
 
     .gradient-content {
-        @apply absolute left-[3px] top-[3px] h-[calc(100%-6px)] w-[calc(100%-6px)] rounded-full;
+        @apply absolute left-[3px] top-[3px] h-[calc(100%-6px)] w-[calc(100%-6px)] rounded-full border-slate-950 border-2;
     }
 }
