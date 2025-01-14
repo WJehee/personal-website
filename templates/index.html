@@ -14,7 +14,7 @@
                     <h1>Wouter Jehee</h1>
                     <h2>Cybersecurity Engineer</h2>
                 </hgroup>
-                <div class="pt-8 mb-8">
+                <div class="pt-8 mb-8 text-xl">
                     {{ section.content | safe }}
                 </div>
                 <a href="#projects" class="button bg-fuchsia-950 hover:bg-fuchsia-900">View Projects</a>
@@ -42,11 +42,11 @@
 </section>
 
 <section id="projects" class="bg-slate-950 pb-0 lg:pb-8">
-    <div class="container mx-auto py-8 lg:py-16 divide-y-2 divide-zinc-300">
+    <div class="container mx-auto px-4 py-0 lg:py-16 divide-y-2 divide-zinc-300">
         <div class="project">
-            <div class="px-4 py-8 lg:p-16">
+            <div class="py-2 md:py-8 lg:p-16">
                 <h1>Fuzzing</h1>
-                <p>
+                <p class="text-xl">
                     For my master thesis I worked on fuzzing several libraries used on a small satellites (known as cubesats), the main one being the Cubesat Space Protocol (CSP).
                     For this use case I translated the code for the firmware to run in a simulator making it much faster to iterate.
                 </p>
@@ -57,9 +57,9 @@
                     <h3 class="bg-slate-900 p-4 rounded-xl uppercase font-mono">Packet</h3> 
                 </div>
                 <div class="flex justify-between mb-2 flex-wrap items-center overflow-hidden py-4 px-2 group">
-                    <div class="relative z-20 w-6 h-6 bg-rose-900 rounded-full ring-zinc-900 ring-8 shrink-0"></div>
-                    <div class="relative z-10 w-6 h-6 bg-violet-900 rounded-full ring-zinc-900 ring-8 shrink-0">
-                        <div class="absolute z-0 h-1 right-full top-1/2 w-svw bg-zinc-900 -translate-y-1/2">
+                    <div class="relative z-10 w-6 h-6 bg-rose-900 rounded-full ring-zinc-900 ring-8 shrink-0"></div>
+                    <div class="relative z-0 w-6 h-6 bg-violet-900 rounded-full ring-zinc-900 ring-8 shrink-0">
+                        <div class="absolute -z-10 h-1 right-full top-1/2 w-svw bg-zinc-900 -translate-y-1/2">
                             <div class="bg-fuchsia-900 h-1 rounded-full animate-line-lr"></div>
                         </div>
                     </div>
@@ -72,10 +72,9 @@
         </div>
 
         <div class="project">
-            <!--TODO: do we really want text-right here?-->
             <div class="px-4 py-8 lg:p-16 xl:order-last xl:text-right">
                 <h1>Blot</h1>
-                <p>
+                <p class="text-xl">
                     Blot is a platform for organizing games that require GPS location.
                     It is a general framework that allows for custom definitions of zones and easy placement of those zones.
                     There are already a few examples implemented and more might be added in the future.
@@ -91,7 +90,7 @@
         <div class="project">
             <div class="px-4 py-8 lg:p-16">
                 <h1>M0TH3R4TE</h1>
-                <p>
+                <p class="text-xl">
                     This is a terminal application developed in rust with the ratatui library.
                     The goal of the application is to serve as an interface for players of a sci-fi Table Top Role-Playing Game (TTRPG) to interact with their spaceship.
                 </p>
