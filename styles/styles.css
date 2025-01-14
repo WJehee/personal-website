@@ -90,6 +90,12 @@
     .card {
         @apply relative rounded shadow-lg bg-slate-950 p-8 border-slate-600 border-2 blur-sm hover:blur-0 transition hover:scale-110 hover:z-10;
     }
+
+    .hex {
+        clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+        /*clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%, 25% 0%);*/
+        overflow: hidden;
+    }
 }
 
 @layer utilities {
@@ -106,7 +112,7 @@
     }
 
     .gradient-wrapper {
-        @apply relative rounded-full overflow-hidden;
+        @apply relative overflow-hidden;
     }
 
     .gradient-wrapper::before {
@@ -121,7 +127,7 @@
     }
 
     .gradient-content {
-        @apply absolute left-[3px] top-[3px] h-[calc(100%-6px)] w-[calc(100%-6px)] rounded-full border-slate-950 border-2;
+        @apply absolute left-[3px] top-[3px] h-[calc(100%-6px)] w-[calc(100%-6px)] border-slate-950 border-2;
     }
 
     .gradient-underline {
