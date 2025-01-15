@@ -33,6 +33,10 @@
         @apply pt-16;
     }
 
+    article {
+        @apply sm:text-xl;
+    }
+
     article p {
         @apply pb-4;
     }
@@ -87,8 +91,8 @@
         @apply grid grid-cols-1 xl:grid-cols-2 py-16 xl:py-32
     }
 
-    .card {
-        @apply relative rounded shadow-lg bg-slate-950 p-8 border-slate-600 border-2 blur-sm hover:blur-0 transition hover:scale-110 hover:z-10;
+    .blurred-card {
+        @apply relative rounded shadow-lg bg-slate-950 border-slate-600 border-2 blur-sm hover:blur-0 transition hover:scale-110 hover:z-10 opacity-20 hover:opacity-100;
     }
 
     .hex {
