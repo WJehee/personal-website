@@ -41,10 +41,6 @@
         @apply text-slate-400 hover:text-fuchsia-900;
     }
 
-    article code {
-        @apply font-mono;
-    }
-
     article ul {
         @apply list-disc;
     }
@@ -66,11 +62,11 @@
     }
 
     article pre {
-        @apply my-2 p-2 rounded bg-slate-900;
+        @apply my-2 p-2 rounded;
     }
 
     article code {
-        @apply p-1 font-mono bg-slate-900;
+        @apply p-1 font-mono;
     }
 
     article pre code {
