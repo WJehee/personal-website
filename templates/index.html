@@ -8,7 +8,7 @@
 
 <section id="hero" class="min-h-screen bg-black">
     <div class="container mx-auto">
-        <div class="grid grid-cols-1 lg:grid-cols-2 my-16 lg:my-32">
+        <div class="my-16 grid grid-cols-1 lg:my-32 lg:grid-cols-2">
             <div class="mb-8 px-4">
                 <hgroup>
                     <h1>Wouter Jehee</h1>
@@ -22,15 +22,15 @@
             </div>
 
             <div class="flex flex-col items-center justify-center">
-                <div class="gradient-wrapper h-[350px] w-[350px] md:h-[600px] md:w-[500px] hex">
-                    <div class="gradient-content flex items-center justify-center bg-slate-900 hex">
+                <div class="gradient-wrapper hex h-[350px] w-[350px] md:h-[600px] md:w-[500px]">
+                    <div class="gradient-content hex flex items-center justify-center bg-slate-900">
                         <img src="" alt="Profile pic">
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="flex justify-evenly w-full pb-8">
+        <div class="flex w-full justify-evenly pb-8">
             {% include "partials/email.html" %}
             {% include "partials/github.html" %}
             {% include "partials/keyoxide.html" %}
@@ -41,7 +41,7 @@
 </section>
 
 <section id="projects" class="bg-slate-950 pb-0 lg:pb-8">
-    <div class="container mx-auto px-4 py-0 lg:py-16 divide-y-2 divide-zinc-300">
+    <div class="container mx-auto divide-y-2 divide-zinc-300 px-4 py-0 lg:py-16">
         <div class="project">
             <div class="py-2 md:py-8 lg:p-16">
                 <h1>Fuzzing</h1>
@@ -50,16 +50,16 @@
                     For this use case I translated the code for the firmware to run in a simulator making it much faster to iterate.
                 </p>
             </div>
-            <div class="flex flex-col mt-32">
+            <div class="mt-32 flex flex-col">
                 <div class="flex justify-center">
                     <!--TODO: Randomize or do CSP header-->
-                    <h3 class="bg-slate-900 p-4 rounded-xl uppercase font-mono">Packet</h3> 
+                    <h3 class="rounded-xl bg-slate-900 p-4 font-mono uppercase">Packet</h3> 
                 </div>
-                <div class="flex justify-between mb-2 flex-wrap items-center overflow-hidden py-4 px-2 group">
-                    <div class="relative z-10 w-6 h-6 bg-rose-900 rounded-full ring-zinc-900 ring-8 shrink-0"></div>
-                    <div class="relative z-0 w-6 h-6 bg-violet-900 rounded-full ring-zinc-900 ring-8 shrink-0">
-                        <div class="absolute -z-10 h-1 right-full top-1/2 w-svw bg-zinc-900 -translate-y-1/2">
-                            <div class="bg-fuchsia-900 h-1 rounded-full animate-line-lr"></div>
+                <div class="group mb-2 flex flex-wrap items-center justify-between overflow-hidden px-2 py-4">
+                    <div class="relative z-10 h-6 w-6 shrink-0 rounded-full bg-rose-900 ring-8 ring-zinc-900"></div>
+                    <div class="relative z-0 h-6 w-6 shrink-0 rounded-full bg-violet-900 ring-8 ring-zinc-900">
+                        <div class="absolute right-full top-1/2 -z-10 h-1 w-svw -translate-y-1/2 bg-zinc-900">
+                            <div class="h-1 animate-line-lr rounded-full bg-fuchsia-900"></div>
                         </div>
                     </div>
                 </div>

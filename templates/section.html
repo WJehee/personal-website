@@ -9,7 +9,7 @@
 <main>
     <div class="container mx-auto px-4 pb-8">
         <h1>{{section.title}}</h1>
-        <div class="text-lg sm:text-2xl text-slate-700 mb-12">
+        <div class="mb-12 text-lg text-slate-700 sm:text-2xl">
             {{ section.content | safe }}
         </div>
 
@@ -17,9 +17,9 @@
         {% for post in section.pages %}
             <li class="flex justify-between">
                 <a href="{{post.permalink}}" class="group">
-                    <span class="text-fuchsia-700 group-hover:text-fuchsia-600 pr-2">{{ post.title }}</span>
-                    <span class="text-slate-700 hidden lg:inline-block">//</span>
-                    <span class="pl-2 hidden lg:inline-block">{{ post.description }}</span>
+                    <span class="pr-2 text-fuchsia-700 group-hover:text-fuchsia-600">{{ post.title }}</span>
+                    <span class="hidden text-slate-700 lg:inline-block">//</span>
+                    <span class="hidden pl-2 lg:inline-block">{{ post.description }}</span>
                 </a>
                 <span class="text-slate-700">{{ post.date | date(format="%d // %b // %Y") }}</span>
             </li>
