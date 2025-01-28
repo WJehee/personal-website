@@ -2,6 +2,7 @@
 title = "DNS amplification in the Dutch Digital Landscape"
 description = "Proof of concept attack + report"
 date = 2023-04-21
+draft = true
 +++
 
 This project was conducted for the IN4253ET "Hacking Lab" course at the Delft University of Technology.  

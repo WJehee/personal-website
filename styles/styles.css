@@ -41,7 +41,7 @@
         @apply text-slate-400 hover:text-fuchsia-900;
     }
 
-    article ul {
+    ul {
         @apply list-disc;
     }
 
@@ -53,11 +53,11 @@
         @apply list-decimal;
     }
 
-    article ul li {
+    ul li {
         @apply ml-4;
     }
 
-    article ol li {
+    ol li {
         @apply ml-6;
     }
 
