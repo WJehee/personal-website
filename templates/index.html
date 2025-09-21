@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block title %}
+    {% block title %}
 | {{ section.title }} 
 {% endblock title %}
 
@@ -39,100 +39,99 @@
     </div>
 </section>
 
-<section id="projects" class="bg-slate-950 pb-0 lg:pb-8">
-    <div class="container mx-auto divide-y-2 divide-zinc-300 px-4 py-0 lg:py-16">
-        <div class="project">
-            <div class="px-4 py-8 lg:p-16">
-                <h1>Blot</h1>
-                <p class="text-xl mb-4">
-                    Blot is a platform for organizing different types of games involving maps.
-                    Currently, the following game modes are in development:
-                </p>
-                <ul class="text-xl">
-                    <li>
-                        Royale: a battle royale style game where players have to visit locations to score points and collect powerups that can help them against their opponents.
-                    </li>
-                    <li>
-                        Route: follow a route of points, but the only information given is your current distance to the next point.
-                    </li>
-                    <li>
-                        Pin: an online quiz where the answer to the questions is a location on a map (<a href="https://iscoutgame.com/nl/home" target="_blank">inspired by IScout</a>).
-                    </li>
-                </ul>
-                <br>
-                <a class="button bg-fuchsia-950 line-through" disabled>View live demo</a>
-                <a href="/posts/blot/" class="button bg-slate-900 hover:ring-2 ring-fuchsia-800">Read more</a>
-            </div>
-            <div>
-                <img src="images/blot_image.webp" alt="">
-            </div>
-        </div>
-
-        <div class="project">
-            <div class="py-2 md:py-8 lg:p-16 xl:order-last xl:text-right">
-                <h1>Fuzzing</h1>
-                <p class="text-xl mb-4">
-                    For my master thesis I worked on fuzzing several libraries used on a small satellites (known as cubesats), the main one being the Cubesat Space Protocol (CSP).
-                    For this use case I translated the code for the firmware to run in a simulator making it much faster to iterate on.
-                </p>
-                <a href="https://repository.tudelft.nl/record/uuid:d7fbdacd-150d-4a2d-abcb-d5638eb54393" target="_blank" class="button bg-fuchsia-950 hover:bg-fuchsia-800">Read paper</a>
-                <a href="https://github.com/WJehee/thesis" target="_blank" class="button bg-slate-900 hover:ring-2 ring-fuchsia-800">View source</a>
-            </div>
-            <div class="mt-32 flex flex-col">
-                <div class="flex justify-center">
-                    <!--TODO: Randomize or do CSP header-->
-                    <h3 class="rounded-xl bg-slate-900 p-4 font-mono uppercase">Packet</h3> 
-                </div>
-                <div class="group mb-2 flex flex-wrap items-center justify-between overflow-hidden px-2 py-4">
-                    <div class="relative z-10 h-6 w-6 shrink-0 rounded-full bg-rose-900 ring-8 ring-zinc-900"></div>
-                    <div class="relative z-0 h-6 w-6 shrink-0 rounded-full bg-violet-900 ring-8 ring-zinc-900">
-                        <div class="absolute right-full top-1/2 -z-10 h-1 w-svw -translate-y-1/2 bg-zinc-900">
-                            <div class="h-1 animate-line-lr rounded-full bg-fuchsia-900"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="flex justify-between">
-                    <p>AFL++</p>
-                    <p>Target</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="project">
-            <div class="px-4 py-8 lg:p-16 ">
-                <h1>DNS amplification</h1>
-                <p class="text-xl">
-                    In this group project we investigated the amplification potention of the Dutch government's DNS infrastructure.
-                    The amplification potential was the most severe using DNS any requests.
-                    We implemented and demonstrated a DoS attack using the worst offending domains and DNS servers.
-                    Some examples of the worst offenders can be seen in the graph.
-                </p>
-                <br>
-                <a href="https://github.com/gregor160300/IN4253ET-HackingLab/blob/main/results/paper.pdf" target="_blank" class="button bg-fuchsia-950 hover:bg-fuchsia-800">Read paper</a>
-                <a href="https://github.com/gregor160300/IN4253ET-HackingLab" target="_blank" class="button bg-slate-900 hover:ring-2 ring-fuchsia-700">View source</a>
-            </div>
-            <div>
-                <img src="images/dnsamp.webp" alt="">
-            </div>
-        </div>
-
-        <!--<div class="project">-->
-        <!--    <div class="px-4 py-8 lg:p-16 xl:order-last xl:text-right">-->
-        <!--        <h1>M0TH3R4TE</h1>-->
-        <!--        <p class="text-xl">-->
-        <!--            This is a terminal application developed in Rust with the -->
-        <!--            <a href="https://ratatui.rs/">ratatui</a> library.-->
-        <!--            The goal of the application is to serve as a custom interface for players to interact with a fictional spaceship and it's crew.-->
-        <!--        </p>-->
-        <!--        <br>-->
-        <!--        <a href="" class="button bg-fuchsia-700 hover:bg-fuchsia-600">Read more</a>-->
-        <!--        <a href="https://github.com/WJehee/M0TH3RATE" target="_blank" class="button bg-slate-900 hover:ring-2 ring-fuchsia-700">View source code</a>-->
-        <!--    </div>-->
-        <!--    <div>-->
-        <!--        <img src="images/blot_image.webp" alt="">-->
-        <!--    </div>-->
-        <!--</div>-->
-    </div>
-</section>
+<!-- <section id="projects" class="bg-slate-950 pb-0 lg:pb-8"> -->
+<!--     <div class="container mx-auto divide-y-2 divide-zinc-300 px-4 py-0 lg:py-16"> -->
+<!--         <div class="project"> -->
+<!--             <div class="px-4 py-8 lg:p-16"> -->
+<!--                 <h1>Blot</h1> -->
+<!--                 <p class="text-xl mb-4"> -->
+<!--                     Blot is a platform for organizing different types of games involving maps. -->
+<!--                     Currently, the following game modes are in development: -->
+<!--                 </p> -->
+<!--                 <ul class="text-xl"> -->
+<!--                     <li> -->
+<!--                         Royale: a battle royale style game where players have to visit locations to score points and collect powerups that can help them against their opponents. -->
+<!--                     </li> -->
+<!--                     <li> -->
+<!--                         Route: follow a route of points, but the only information given is your current distance to the next point. -->
+<!--                     </li> -->
+<!--                     <li> -->
+<!--                         Pin: an online quiz where the answer to the questions is a location on a map (<a href="https://iscoutgame.com/nl/home" target="_blank">inspired by IScout</a>). -->
+<!--                     </li> -->
+<!--                 </ul> -->
+<!--                 <br> -->
+<!--                 <a class="button bg-fuchsia-950 line-through" disabled>View live demo</a> -->
+<!--                 <a href="/posts/blot/" class="button bg-slate-900 hover:ring-2 ring-fuchsia-800">Read more</a> -->
+<!--             </div> -->
+<!--             <div> -->
+<!--                 <img src="images/blot_image.webp" alt=""> -->
+<!--             </div> -->
+<!--         </div> -->
+<!---->
+<!--         <div class="project"> -->
+<!--             <div class="py-2 md:py-8 lg:p-16 xl:order-last xl:text-right"> -->
+<!--                 <h1>Fuzzing</h1> -->
+<!--                 <p class="text-xl mb-4"> -->
+<!--                     For my master thesis I worked on fuzzing several libraries used on a small satellites (known as cubesats), the main one being the Cubesat Space Protocol (CSP). -->
+<!--                     For this use case I translated the code for the firmware to run in a simulator making it much faster to iterate on. -->
+<!--                 </p> -->
+<!--                 <a href="https://repository.tudelft.nl/record/uuid:d7fbdacd-150d-4a2d-abcb-d5638eb54393" target="_blank" class="button bg-fuchsia-950 hover:bg-fuchsia-800">Read paper</a> -->
+<!--                 <a href="https://github.com/WJehee/thesis" target="_blank" class="button bg-slate-900 hover:ring-2 ring-fuchsia-800">View source</a> -->
+<!--             </div> -->
+<!--             <div class="mt-32 flex flex-col"> -->
+<!--                 <div class="flex justify-center"> -->
+<!--                     <h3 class="rounded-xl bg-slate-900 p-4 font-mono uppercase">Packet</h3>  -->
+<!--                 </div> -->
+<!--                 <div class="group mb-2 flex flex-wrap items-center justify-between overflow-hidden px-2 py-4"> -->
+<!--                     <div class="relative z-10 h-6 w-6 shrink-0 rounded-full bg-rose-900 ring-8 ring-zinc-900"></div> -->
+<!--                     <div class="relative z-0 h-6 w-6 shrink-0 rounded-full bg-violet-900 ring-8 ring-zinc-900"> -->
+<!--                         <div class="absolute right-full top-1/2 -z-10 h-1 w-svw -translate-y-1/2 bg-zinc-900"> -->
+<!--                             <div class="h-1 animate-line-lr rounded-full bg-fuchsia-900"></div> -->
+<!--                         </div> -->
+<!--                     </div> -->
+<!--                 </div> -->
+<!--                 <div class="flex justify-between"> -->
+<!--                     <p>AFL++</p> -->
+<!--                     <p>Target</p> -->
+<!--                 </div> -->
+<!--             </div> -->
+<!--         </div> -->
+<!---->
+<!--         <div class="project"> -->
+<!--             <div class="px-4 py-8 lg:p-16 "> -->
+<!--                 <h1>DNS amplification</h1> -->
+<!--                 <p class="text-xl"> -->
+<!--                     In this group project we investigated the amplification potention of the Dutch government's DNS infrastructure. -->
+<!--                     The amplification potential was the most severe using DNS any requests. -->
+<!--                     We implemented and demonstrated a DoS attack using the worst offending domains and DNS servers. -->
+<!--                     Some examples of the worst offenders can be seen in the graph. -->
+<!--                 </p> -->
+<!--                 <br> -->
+<!--                 <a href="https://github.com/gregor160300/IN4253ET-HackingLab/blob/main/results/paper.pdf" target="_blank" class="button bg-fuchsia-950 hover:bg-fuchsia-800">Read paper</a> -->
+<!--                 <a href="https://github.com/gregor160300/IN4253ET-HackingLab" target="_blank" class="button bg-slate-900 hover:ring-2 ring-fuchsia-700">View source</a> -->
+<!--             </div> -->
+<!--             <div> -->
+<!--                 <img src="images/dnsamp.webp" alt=""> -->
+<!--             </div> -->
+<!--         </div> -->
+<!---->
+<!--         <div class="project"> -->
+<!--             <div class="px-4 py-8 lg:p-16 xl:order-last xl:text-right"> -->
+<!--                 <h1>M0TH3R4TE</h1> -->
+<!--                 <p class="text-xl"> -->
+<!--                     This is a terminal application developed in Rust with the -->
+<!--                     <a href="https://ratatui.rs/">ratatui</a> library. -->
+<!--                     The goal of the application is to serve as a custom interface for players to interact with a fictional spaceship and it's crew. -->
+<!--                 </p> -->
+<!--                 <br> -->
+<!--                 <a href="" class="button bg-fuchsia-700 hover:bg-fuchsia-600">Read more</a> -->
+<!--                 <a href="https://github.com/WJehee/M0TH3RATE" target="_blank" class="button bg-slate-900 hover:ring-2 ring-fuchsia-700">View source code</a> -->
+<!--             </div> -->
+<!--             <div> -->
+<!--                 <img src="images/blot_image.webp" alt=""> -->
+<!--             </div> -->
+<!--         </div> -->
+<!--     </div> -->
+<!-- </section> -->
 
 {% endblock main %}

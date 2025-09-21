@@ -18,7 +18,7 @@ Not all sequences end at 1 however, these numbers are categorized as follows:
 Lastly, there are also divergent numbers, which are numbers of which the full Aliquot sequence has not yet been found. The Lehmer five are the most well known as they are the first 5 numbers for which this is the case. The Lehmer five are: 276, 552, 564, 660, 966.
 
 I want to visualize all the Aliquot sequences up to 1000.
-Computing the sequences for these divergent numbers is being done by supercomputers as we speak.
+Computing the sequences for these divergent numbers is being done by supercomputers as you read this.
 Running a python script on my 10 year old computer is not going to beat that.
 So to limit how far we go, we stop computing the sequences after doing 10 steps from the original number.
 We create an edge for the last number computed to a ??? sink node, as can be seen in the graph.
