@@ -1,7 +1,7 @@
 name: "Wouterjehee.com"
 run-name: Zola blog deploy
 on:
-  pull_request:
+  workflow_dispatch:
   push:
 jobs:
   build:
